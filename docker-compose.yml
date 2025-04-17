@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  nginx:
+    image: openresty/openresty:alpine
+    container_name: nginx
+    ports:
+      - "11435:80"
+    volumes:
+      - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf:ro
